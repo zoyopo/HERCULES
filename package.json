@@ -1,0 +1,23 @@
+{
+  "name": "Hercules",
+  "version": "1.0.0",
+  "description": "HERCULES是希腊神话中的大力神 ### 项目作用 优化前后端联调过程中的问题 1.代理切换 2.数据mock ### 计划使用的技术模块 1.node 2.mongodb 3.yapi ### 代码规约 `typescript`",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/koa": "^2.13.1",
+    "@types/koa-bodyparser": "^4.3.0",
+    "@types/koa-router": "^7.4.1",
+    "@types/node": "14.14.33"
+  },
+  "dependencies": {
+    "koa": "^2.13.1",
+    "koa-bodyparser": "^4.3.0",
+    "koa-router": "^10.0.0"
+  }
+}

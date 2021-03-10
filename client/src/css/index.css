@@ -1,0 +1,106 @@
+/* one way */
+.border-vertical {
+  /* background: #fff; */
+  /* border: solid 0.5px #000; */
+  position: relative;
+  padding: 20px;
+}
+.border-vertical::before {
+  position: absolute;
+  content: "";
+  box-sizing: border-box;
+  transform: scaleX(0.5);
+  border-right: 1px solid #000;
+  height: 100%;
+  right: 0;
+  top: 0;
+}
+.border-vertical::after {
+  position: absolute;
+  content: "";
+  box-sizing: border-box;
+  transform: scaleX(0.5);
+  border-right: 1px solid #000;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+
+.border-horizontal {
+  position: relative;
+}
+.border-horizontal::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  transform: scaleY(0.5);
+  border-bottom: 1px solid #000;
+  box-sizing: border-box;
+  right: 0;
+  bottom: 0;
+}
+.border-horizontal::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  transform: scaleY(0.5);
+  border-top: 1px solid #000;
+  box-sizing: border-box;
+  right: 0;
+  top: 0;
+}
+/* 
+anotherway */
+
+.scale-1px {
+  position: relative;
+  border: none;
+  padding: 20px;
+}
+
+.scale-1px::after {
+  content: "";
+  width: 200%;
+  height: 200%;
+  transform: scale(0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  transform-origin: left top;
+  border: 1px solid #000;
+ 
+}
+
+/* enhance */
+
+@media (-webkit-device-pixel-ratio: 1.5) {
+  .scale-1px::after {
+    transform: scale(0.6666);
+    width: 150%;
+    height: 150%;
+  }
+}
+@media (-webkit-device-pixel-ratio: 2) {
+  .scale-1px::after {
+    transform: scale(0.5);
+    width: 200%;
+    height: 200%;
+  }
+}
+
+@media (-webkit-device-pixel-ratio: 3) {
+  .scale-1px::after {
+    transform: scale(0.3333);
+    width: 300%;
+    height: 300%;
+  }
+}
+
+@media (-webkit-device-pixel-ratio: 4) {
+  .scale-1px::after {
+    transform: scale(0.25);
+    width: 400%;
+    height: 400%;
+  }
+}
